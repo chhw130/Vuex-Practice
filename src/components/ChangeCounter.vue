@@ -4,7 +4,7 @@ import { useStore } from 'vuex';
 const store = useStore();
 
 const countUpBtnHandler = () => {
-  store.commit('increment');
+  store.getters.finalCounter;
 };
 </script>
 

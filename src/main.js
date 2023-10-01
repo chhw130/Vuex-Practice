@@ -16,6 +16,12 @@ const store = createStore({
       state.counter = ++state.counter;
     },
   },
+
+  getters: {
+    finalCounter(state) {
+      return (state.counter = ++state.counter);
+    },
+  },
 });
 
 app.use(store);
