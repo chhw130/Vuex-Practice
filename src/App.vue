@@ -1,19 +1,18 @@
+<script setup>
+import { useStore } from 'vuex';
+import BaseContainer from './components/BaseContainer.vue';
+import ChangeCounter from './components/ChangeCounter.vue';
+
+const store = useStore();
+
+const count = store.state.counter;
+</script>
 <template>
   <base-container title="Vuex">
-    <h3>0</h3>
-    <button>Add 1</button>
+    <h3>{{ count }}</h3>
+    <ChangeCounter />
   </base-container>
 </template>
-
-<script>
-import BaseContainer from './components/BaseContainer.vue';
-
-export default {
-  components: {
-    BaseContainer,
-  },
-};
-</script>
 
 <style>
 * {
