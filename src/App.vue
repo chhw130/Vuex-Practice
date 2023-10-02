@@ -1,18 +1,18 @@
 <script setup>
 import { useStore } from 'vuex';
-import {computed} from
+import { computed } from 'vue';
 import BaseContainer from './components/BaseContainer.vue';
 import ChangeCounter from './components/ChangeCounter.vue';
 
 const store = useStore();
 
-// const count = computed(() => {
-//   return store.state.counter;
-// });
+const count = computed(() => {
+  return store.state.counter;
+});
 </script>
 <template>
-  <base-container title="Vuex">
-    <h3>{{ count() }}</h3>
+  <base-container>
+    <h3>{{ count }}</h3>
     <ChangeCounter />
   </base-container>
 </template>
